@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Database, Cpu, ShieldCheck, MessageSquareShare, RefreshCw } from 'lucide-react';
 import { Header } from './components/Header';
 import { ChatBox } from './components/ChatBox';
+import { WebhookSimulator } from './components/WebhookSimulator';
+import { SystemOverview } from './components/SystemOverview';
 import { checkHealth } from './services/api';
 
 export const App: React.FC = () => {
@@ -104,6 +106,9 @@ export const App: React.FC = () => {
           </p>
         </div>
       </section>
+
+      <WebhookSimulator />
+      <SystemOverview />
 
       <footer className="footer-text">
         TechFashion AI Customer Support RAG Agent • Fullstack React & Node.js Architecture

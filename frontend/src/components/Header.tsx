@@ -1,5 +1,5 @@
-import React from 'react';
-import { Zap, Sparkles } from 'lucide-react';
+﻿import React from 'react';
+import { Shirt, Headphones } from 'lucide-react';
 import { StatusBadge } from './StatusBadge';
 
 interface HeaderProps {
@@ -10,17 +10,19 @@ export const Header: React.FC<HeaderProps> = ({ apiStatus }) => {
   return (
     <header className="glass-card header-wrapper">
       <div className="brand-section">
-        <div className="brand-logo-badge">
-          <Zap size={26} strokeWidth={2.5} />
+        <div className="brand-logo-badge" title="TechFashion Brand">
+          <Shirt size={24} strokeWidth={2.4} color="#121212" />
         </div>
         <div>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-            <h1 className="brand-title">Tech-Fashion AI</h1>
-            <span className="brand-badge-tag">RAG AGENT</span>
+            <h1 className="brand-title">TechFashion AI</h1>
+            <span className="brand-badge-tag" style={{ background: 'var(--max-yellow)', color: '#121212' }}>
+              FASHION CSKH
+            </span>
           </div>
-          <div className="brand-subtitle">
-            <Sparkles size={13} style={{ display: 'inline', marginRight: '4px', color: 'var(--max-purple)' }} />
-            Omni-Channel Customer Support Intelligence
+          <div className="brand-subtitle" style={{ display: 'flex', alignItems: 'center', gap: '5px', color: 'var(--text-secondary)', fontWeight: 600 }}>
+            <Headphones size={14} style={{ flexShrink: 0, color: '#121212' }} />
+            <span>Hệ thống Tư vấn & CSKH Thời trang Đa kênh (Facebook & Zalo)</span>
           </div>
         </div>
       </div>
